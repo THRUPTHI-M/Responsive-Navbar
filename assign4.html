@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MODULE-4 SOLUTION</title>
+    <script>
+    	(function(window) {
+    var helloSpeaker = new Object();
+    var speakWord = "Hello";
+    helloSpeaker.speak = function(name) {
+        console.log(speakWord + " " + name);
+    };
+    window.helloSpeaker = helloSpeaker;
+})(window);
+    </script>
+    <script>
+    	(function(window) {
+    var byeSpeaker = new Object();
+    var speakWord = "Goodbye";
+    byeSpeaker.speak = function speak(name) {
+        console.log(speakWord + " " + name);
+    };
+    window.byeSpeaker = byeSpeaker;
+})(window);
+    </script>
+    <script>
+    	(function() {
+    var names = ["Tom", "Jerry", "Ram", "Jassica", "Siya", "Lakshman", "Jimmy", "Ravaan", "Hanuman", "Janki"];
+    for (var i = 0; i < names.length; i++) {
+        var firstLetter = names[i].charAt(0).toLowerCase();
+        if (firstLetter === 'j') {
+            byeSpeaker.speak(names[i]);
+        } else {
+            helloSpeaker.speak(names[i]);
+        }
+    }
+})();
+    </script>
+</head>
+
+<body>
+    <h1>MODULE-4 SOLUTION </h1>
+    <p> Do Check out the console in the web developer tools to see the output! Thanks for reviewing...</p>
+</body>
+
+</html>
